@@ -1,0 +1,308 @@
+*
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+      
+}
+
+html, body {
+    overflow: hidden;
+    height: 100%;
+}
+
+/* body {
+    background: linear-gradient(320deg, 
+        hsl(187deg 100% 55%) 0%, 
+        hsl(190deg 100% 81%) 44%, 
+        hsl(190deg 100% 94%) 61%, 
+        hsl(232deg 100% 95%) 73%, 
+        hsl(229deg 98% 83%) 85%, 
+        hsl(222deg 96% 69%) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;  
+    margin: 0;  
+    padding: 0; 
+} */
+
+
+:root { /* global variable */
+        --dk-violet: hsl(268, 75%, 9%);
+        --lt-violet: hsl(268, 47%, 21%);
+        --lt-violet2:hsl(281, 89%, 26%);
+        --vb-violet: hsl(285, 91%, 52%);
+        --vb-violet2: hsl(290, 70%, 36%);
+        --vb-yellow:hsl(52, 100%, 62%);
+        --pl-white: hsl(0, 0, 100%);
+        --vb-cyan: hsl(176, 100%, 44%);
+        --vb-cyan2: hsl(177, 92%, 70%);
+        --dk-text: hsl(198, 20%, 13%);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(231deg,rgba(22,6,40,1)0%,rgba(52,28,79,1)50%,rgba(88,7,125,1)100%);
+    overflow: hidden;
+
+}
+.container{
+
+    width: 85%;
+    max-width: 400px;
+    margin-top: -40px;
+    overflow: hidden;
+
+
+}
+h1{
+    color:coral;
+    text-align: center;
+
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.copy_result{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    background-color: var(--dk-violet);
+    border-radius: 1rem;
+    border-bottom: 0.35rem solid var(--lt-violet2);
+    margin: 1rem 0;
+    padding-top:0.35rem;
+    padding: 1rem;
+}
+
+.display{
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 1.15rem,1rem;
+    color: var(--vb-yellow);
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-right: 3.25rem;
+    border: none;
+    outline: none;
+}
+
+.display::placeholder{
+    
+    color: var(--vb-yellow);
+    text-transform: uppercase;
+    font-family: "Nerko One", cursive;
+    font-weight: 300;
+}
+
+.copy_result button{
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.input_container{
+    background-color: var(--dk-violet);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+   
+    color: aliceblue;
+    padding: 1.3rem;
+    padding-top: 0.1rem;
+    border-bottom: 0.35rem solid var(--lt-violet2);
+
+}
+
+.input_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1.3rem;
+    color: var(--vb-yellow);
+    font-weight: 500;
+    font-family: "Nerko One", cursive;
+
+}
+
+#Length_pass{
+
+    font-weight: 400;
+    font-family: "Nerko One", cursive;
+    color: azure;
+}
+
+.slider{
+    width: 100%;
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--lt-violet);
+    border-radius: 1rem;
+    background-image: linear-gradient(var(--vb-violet),var(--vb-violet));
+    height: 0.70rem;
+    background-repeat: no-repeat;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--vb-yellow);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+    position: relative;
+}
+
+.slider:focus{
+    outline: 3px solid var(--vb-yellow);
+}
+
+.slider::-webkit-slider-thumb:hover{
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61,0.80);
+}
+
+
+
+.strength{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6); /* Shadow with blur and rounded effect */
+}
+
+.strength p{
+    font-size:x-large ;
+    font-weight: 300;
+    font-family: "Nerko One", cursive;
+
+}
+
+.generate_button{
+    width: 100%;
+    background-color: var(--vb-violet);
+    color: var(--vb-yellow);
+    border-bottom: 0.25rem solid var(--vb-yellow);
+    border-radius: 10px;
+    padding: 0.4rem;
+    font-size: xx-large;
+    font-family: "Nerko One", cursive;
+    font-weight: 300;
+    
+}
+
+.copy_result button {
+    box-shadow: none; /* Removes shadow */
+    padding: 0; /* Removes unnecessary padding */
+    background:none;
+    border: none;
+    cursor: pointer;
+
+}
+
+.checks{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+}
+
+.checks input{
+     appearance: none;  /*we dont need defualt styke */
+     width: 20px;
+     height: 20px;
+     border: 1px solid var(--vb-cyan);
+     cursor: pointer;
+     position: relative;
+     border-radius: 0.35rem;
+}
+
+.checks input:checked{
+    background-color: var(--vb-cyan2);
+}
+
+.checks input:checked::before{
+
+    content: "✓";
+    position: absolute;
+    color: var(--dk-text);
+    font-size: 1.05rem;
+    font-weight: 800;
+    left: 50%;
+    top: -3.5px;
+    transform: translate(-50%);
+    font-family: "Nerko One", cursive;
+}
+
+.tooltips{
+
+    position: absolute;
+    background-color: var(--vb-violet2);
+    color: var(--vb-yellow);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 200ms ease-in-out;
+
+}
+
+.tooltips.active{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.slider::-moz-range-thumb{
+    appearance: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--vb-yellow);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px rgba(255,229,61,0.50);
+    transition: all 100ms ease-in;
+    position: relative;
+}
+
+.slider::-moz-range-thumb:hover{
+    outline: 2px solid var(--vb-yellow);
+    background-color: var(--dk-violet);
+    box-shadow: 0px 0px 25px 5px rgba(255,229,61,0.80);
+}
+
